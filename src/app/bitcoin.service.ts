@@ -7,7 +7,9 @@ export interface BitCoin {
   };
   bpi: {
     BRL: {
-      code: string;
+      rate_float: number;
+    };
+    USD: {
       rate_float: number;
     };
   };

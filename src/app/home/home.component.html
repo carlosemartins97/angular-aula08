@@ -12,12 +12,14 @@
   <table class="table">
     <thead>
       <th>Data e hora</th>
-      <th>Valor</th>
+      <th>Valor em BRL (R$)</th>
+      <th>Valor em USD ($)</th>
     </thead>
     <tbody>
       <tr *ngFor="let bit of bitcoinService.bitcoinList; let i = index">
         <td>{{ bit.time.updated }}</td>
-        <td>R$ {{ bit.bpi.BRL.rate_float }}</td>
+        <td>R$ {{ bit.bpi.BRL.rate_float.toFixed(2) }}</td>
+        <td>R$ {{ bit.bpi.USD.rate_float.toFixed(2) }}</td>
       </tr>
     </tbody>
   </table>
