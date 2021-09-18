@@ -1,0 +1,24 @@
+<div class="container py-5">
+  <h1 class="text-center">Informações do aluno:</h1>
+
+  <div class="container row justify-content-between my-5">
+    <p><strong>Nome:</strong><span> Carlos Eduardo S. Martins</span></p>
+    <p><strong>RA:</strong><span> 0050831921041</span></p>
+  </div>
+
+  <div class="container-fluid row justify-content-between align-items-center">
+    <h2>Bitcoin <span>atualiza a cada 1 min.</span></h2>
+  </div>
+  <table class="table">
+    <thead>
+      <th>Data e hora</th>
+      <th>Valor</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bit of bitcoinService.bitcoinList; let i = index">
+        <td>{{ bit.time.updated }}</td>
+        <td>R$ {{ bit.bpi.BRL.rate_float }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
