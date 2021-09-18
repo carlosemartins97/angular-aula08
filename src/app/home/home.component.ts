@@ -12,6 +12,6 @@ export class HomeComponent implements OnInit {
   constructor(public bitcoinService: BitcoinService) {}
 
   ngOnInit() {
-    this.bitcoinService.makeBitcointRequest(5000); //tempo da requisição.
+    this.bitcoinService.makeBitcointRequest(60000); //tempo da requisição.
   }
 }
